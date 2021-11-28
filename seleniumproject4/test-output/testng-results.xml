@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-11-28T05:36:17 EST" name="regression" finished-at="2021-11-28T05:36:32 EST" duration-ms="15667">
+    <groups>
+    </groups>
+    <test started-at="2021-11-28T05:36:17 EST" name="test1" finished-at="2021-11-28T05:36:32 EST" duration-ms="15667">
+      <class name="regressiontests.NewTest">
+        <test-method is-config="true" signature="browser(java.lang.String,java.lang.String)[pri:0, instance:regressiontests.NewTest@418e7838]" started-at="2021-11-28T05:36:17 EST" name="browser" finished-at="2021-11-28T05:36:26 EST" duration-ms="9160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.facebook.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method signature="f()[pri:0, instance:regressiontests.NewTest@418e7838]" started-at="2021-11-28T05:36:26 EST" name="f" finished-at="2021-11-28T05:36:27 EST" duration-ms="817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:regressiontests.NewTest@418e7838]" started-at="2021-11-28T05:36:27 EST" name="afterTest" finished-at="2021-11-28T05:36:32 EST" duration-ms="5322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- regressiontests.NewTest -->
+    </test> <!-- test1 -->
+  </suite> <!-- regression -->
+</testng-results>
