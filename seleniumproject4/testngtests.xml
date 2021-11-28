@@ -7,6 +7,7 @@
 
 <test name="test1">
 <parameter name="brow" value="chrome"></parameter>
+
 <classes>
 <class name="regressiontests.NewTest"></class>
 </classes>

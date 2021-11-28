@@ -16,9 +16,7 @@ public class NewTest extends baseclass {
   @Test
   public void f() throws IOException {
 	  fbhome ob = new fbhome(driver);
-	  //ob.emailid("abc@yahoo.com");
-	  //ob.password("aaaaaaaa");
-	  ob.findlinks();
+	  ob.findfblinks();
 	
   }
 }

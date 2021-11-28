@@ -35,6 +35,31 @@ public static WebDriver driver;
 		login.click();
 	}
 	
+	public void findfblinks() {
+	List<WebElement>  listoflinks =driver.findElements(By.tagName("a"));
+	System.out.println("Total links are= " + listoflinks.size());
+	
+	for (int i=0;i<listoflinks.size();i++) {
+		System.out.println(listoflinks.get(i).getAttribute("href"));
+	}	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public void findlinks() {
 		 List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 		 System.out.println(allLinks.size());
@@ -46,7 +71,3 @@ public static WebDriver driver;
 	
 }
 
-
-//locate elements
-//page factory constructor
-//create functions

@@ -46,11 +46,11 @@ public void onTestFailure(ITestResult result) {
 	}
 }
 
-@BeforeTest
+@BeforeTest (alwaysRun=true)
   @Parameters({"brow","url"})
   public void browser(String brow, String url) throws InterruptedException {
 		if (brow.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\eclipse-workspace\\softwaretestingproject\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "E:\\eclipseProject\\softwaretestingproject\\drivers\\chromedriver.exe");
 			driver=new ChromeDriver(); 
 			driver.get(url);
 		    driver.manage().window().maximize();
@@ -58,7 +58,7 @@ public void onTestFailure(ITestResult result) {
 		}
 		
 		else if(brow.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\user\\eclipse-workspace\\softwaretestingproject\\drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "E:\\eclipseProject\\softwaretestingproject\\drivers\\geckodriver.exe");
 			//System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 			driver=new FirefoxDriver(); 
 			driver.get(url);
@@ -66,7 +66,7 @@ public void onTestFailure(ITestResult result) {
 		    Thread.sleep(5000);
 		}
 		else {
-			System.setProperty("webdriver.edge.driver", "C:\\Users\\user\\eclipse-workspace\\softwaretestingproject\\drivers\\msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver", "E:\\eclipseProject\\softwaretestingproject\\drivers\\msedgedriver.exe");
 			driver=new EdgeDriver();
 			driver.get(url);
 		    driver.manage().window().maximize();
@@ -74,7 +74,7 @@ public void onTestFailure(ITestResult result) {
 		}
   }
   
-  @AfterTest
+  @AfterTest (alwaysRun=true)
   public void afterTest() throws InterruptedException {
 	  Thread.sleep(5000);
 	  driver.close();
@@ -84,7 +84,7 @@ public void onTestFailure(ITestResult result) {
 		Date dt = new Date();
 		String strdate=dt.toString().replace(" ", "_").replace(":", "_");
 		File cap = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(cap, new File ("C:\\Users\\user\\eclipse-workspace\\seleniumproject4\\pictures\\"+folder+"\\"+strdate+".png"));
+		FileHandler.copy(cap, new File ("C:\\Users\\VAADMIN\\git\\peopleandtechWeekend2021TestNG\\seleniumproject4\\pictures\\"+folder+"\\"+strdate+".png"));
 	}
 
 }
