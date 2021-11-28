@@ -16,6 +16,7 @@ public static WebDriver driver;
 	@FindBy (id="pass" ) WebElement pass;
     @FindBy (xpath="//*[@name='login']") WebElement login;
 	//changed
+	//changed from github
 	public fbhome(WebDriver driver) {
 		fbhome.driver=driver;
 		PageFactory.initElements(driver, this);
